@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Braille Translator</title>
+    <meta name="description" content="Translate text to Braille" />
+    <meta name="author" content="Braille Translator" />
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap">
+
+    <meta property="og:title" content="Braille Translator" />
+    <meta property="og:description" content="Translate text to Braille" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@braille_translator" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Braille Translator</h1>
+            <p>Convert text to Braille representation</p>
+        </header>
+    
+        <main class="box">
+            <div class="translator-card">
+                <div class="input-section">
+                    <label for="text-input">Enter Text</label>
+                    <textarea id="text-input" placeholder="Type or paste text here..."></textarea>
+                    <button id="translate-btn">Translate</button>
+                </div>
+            
+                <div class="output-section">
+                    <div class="output-header">
+                        <h2>Braille Translation</h2>
+                        <button id="copy-btn" aria-label="Copy to clipboard">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="9" y="9" width="13" height="13" rx="2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M5 15H4C2.89543 15 2 14.1046 2 13V4C2 2.89543 2.89543 2 4 2H13C14.1046 2 15 2.89543 15 13V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </div>
+                    
+                    <div id="braille-unicode-output" class="braille-output unicode"></div>
+                    
+                    <div id="braille-display" class="braille-display"></div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Braille Translator - Educational Tool</p>
+        </footer>
+    </div>
+    
+    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script src="braille.js"></script>
+    <footer>
+        &#169 Copyrights
+    </footer>
+</body>
+</html>

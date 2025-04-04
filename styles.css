@@ -1,0 +1,198 @@
+:root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #EFF6FF;
+    --text-color: #1F2937;
+    --light-text: #4B5563;
+    --border-color: #E5E7EB;
+    --background-coo: #F9FAFB
+    --radius: 0.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Noto Sans', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-image: url('WhatsApp Image 2025-04-04 at 23.20.59_46f754a4 (1).jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    color: var(--light-text);
+}
+
+.translator-card {
+    background: white;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.input-section {
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    border-top-left-radius: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-family: inherit;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: transparent;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    padding: 0.5rem 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #1e40af;
+}
+
+.output-section {
+    padding: 1.5rem;
+    background-color: var(--secondary-color);
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.output-header h2 {
+    font-size: 1.25rem;
+    color: var(--primary-color);
+}
+
+#copy-btn {
+    background: transparent;
+    color: var(--primary-color);
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#copy-btn:hover {
+    background-color: rgba(30, 58, 138, 0.1);
+}
+
+.braille-output {
+    background-color: white;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+    min-height: 3rem;
+    word-wrap: break-word;
+}
+
+.unicode {
+    font-size: 2rem;
+    line-height: 1.5;
+}
+
+.braille-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    background-color: white;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-color);
+}
+
+.braille-cell {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 4px;
+    padding: 4px;
+    background-color: white;
+    border-radius: 4px;
+}
+
+.braille-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #D1D5DB;
+    transition: all 0.2s ease;
+}
+
+.braille-dot.filled {
+    background-color: var(--primary-color);
+    transform: scale(1);
+}
+
+footer {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 0.875rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .translator-card {
+    border-radius: var(--radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    }
+    
+    .braille-display {
+    gap: 0.5rem;
+    }
+    
+    .braille-dot {
+    width: 10px;
+    height: 10px;
+    }
+}
